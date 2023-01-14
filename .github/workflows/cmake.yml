@@ -23,17 +23,17 @@ jobs:
       - run: ./mvc
 
       # Build the HTML documentation
-      - name: Doxygen Action
-        uses: mattnotmitt/doxygen-action@v1.9.2
-        with:
-            doxyfile-path: ./Doxyfile
-            working-directory: .
+#      - name: Doxygen Action
+#        uses: mattnotmitt/doxygen-action@v1.9.2
+#        with:
+#            doxyfile-path: ./Doxyfile
+#            working-directory: .
       # Deploy the HTML documentation to GitHub Pages  
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html
+#      - name: Deploy
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./html
             
       - name: Create Release
         id: create_release
